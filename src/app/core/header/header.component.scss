@@ -1,0 +1,15 @@
+@import '~@angular/material/theming';
+
+.title {
+  font-size: 1.2rem;
+  .logo {
+    height: 2rem;
+    margin-right: 10px;
+  }
+}
+.nav-item {
+  opacity: .7;
+  &.active {
+    opacity: 1;
+  }
+}

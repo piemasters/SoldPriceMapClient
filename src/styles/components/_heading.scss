@@ -1,0 +1,28 @@
+@import '~@angular/material/theming';
+
+@mixin primary-header-theme($theme) {
+  $primary: map-get($theme, primary);
+
+  .primary-header {
+    background-color: mat-color($primary, lighter);
+    padding-left: 5rem;
+    h1 {
+      color: mat-color($primary, darker-contrast);
+      margin: 0;
+      padding: 28px 8px;
+    }
+  }
+}
+
+@mixin primary-header-typography($config) {
+  .primary-header h1 {
+    font: {
+      family: mat-font-family($config, headline);
+      size: mat-font-size($config, headline);
+      weight: 300;
+    }
+  }
+}
+
+@include primary-header-theme($app-theme);
+@include primary-header-typography($default-typography);

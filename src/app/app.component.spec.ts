@@ -1,16 +1,32 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule, MatToolbarModule } from '@angular/material';
+import { A11yModule } from '@angular/cdk/a11y';
+
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './core/header/header.component';
+import { AppRoutingModule } from './app-routing.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
       declarations: [
-        AppComponent
+        AppComponent,
+        HeaderComponent
       ],
+      imports: [
+        RouterTestingModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        HttpClientModule,
+        MatToolbarModule,
+        MatButtonModule,
+        A11yModule
+      ]
     }).compileComponents();
   }));
 
@@ -26,10 +42,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('sold-price-map-client');
   });
 
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to sold-price-map-client!');
-  });
 });

@@ -1,0 +1,20 @@
+<mat-toolbar class="core-toolbar mat-elevation-z6" color="primary">
+
+  <a class="mat-button title" routerlink="/" href="/" mat-button="">
+    <span class="mat-button-wrapper">
+      <img class="logo" alt="Logo" src="assets/images/logo.png">
+      <span>LandInsight Tech Challenge</span>
+    </span>
+    <div class="mat-button-ripple mat-ripple" matripple=""></div>
+    <div class="mat-button-focus-overlay"></div>
+  </a>
+
+  <a class="mat-button nav-item" mat-button="" *ngFor="let page of pages" routerLink="{{page.routerLink}}" routerLinkActive="active"
+     [routerLinkActiveOptions]="{ exact: true }">
+    <span class="mat-button-wrapper">{{page.name}}</span>
+    <div class="mat-button-ripple mat-ripple" matripple=""></div>
+    <div class="mat-button-focus-overlay"></div>
+  </a>
+
+</mat-toolbar>
+
