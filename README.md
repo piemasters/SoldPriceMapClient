@@ -61,3 +61,18 @@ The UI will be broken down into the following components:
     - SoldPriceGrid - Binds to the server response data held in SoldPrice component and renders a grid in the required format
     - SoldPricesService - Handles sending the request to the server and handling the response 
     - SoldPriceForm - Used to configure the query parameters used by the SoldPricesService and triggers the request. Sends the response to the SoldPrice component so that the SoldPriceGrid can be updated.
+
+## Future Improvements
+- Create a dynamic form for input & form validation, as well as allowing the number of queries to be increased/decreased 
+- Override the point hover function so the price could be displayed
+- A loading container should hide the grid while it is updating
+- The label field could be auto-generated from the range
+- More time spent on styling (especially for smaller devices)
+- Improve form accessibility
+- Integrate Redux (ng-rx) for state management
+- Add PWA support so service workers can be used for caching
+- Replace Protractor for Cypress and add more integration tests
+- Add more unit tests
+- Add CI support for future deployments
+- Make improvements based on Lighthouse report
+- Add Compodoc for app documentation
